@@ -28,6 +28,12 @@ The `appstore-connect-sdk` module includes the following features:
 npm install @jasperaelvoet/appstore-connect-sdk
 ```
 
+Or install with an alias to use the original import name:
+
+```bash
+npm install appstore-connect-sdk@npm:@jasperaelvoet/appstore-connect-sdk
+```
+
 ## Usage
 
 #### 1. Import `appstore-connect-sdk`
