@@ -1,8 +1,6 @@
-# appstore-connect-sdk [![@latest](https://img.shields.io/npm/v/appstore-connect-sdk.svg)](https://www.npmjs.com/package/appstore-connect-sdk)
+# @jasperaelvoet/appstore-connect-sdk [![@latest](https://img.shields.io/npm/v/@jasperaelvoet/appstore-connect-sdk.svg)](https://www.npmjs.com/package/@jasperaelvoet/appstore-connect-sdk)
 
 The `appstore-connect-sdk` is a Node.js module written in TypeScript that provides a convenient way for developers to interact with the [App Store Connect API](https://developer.apple.com/app-store-connect/api/). The module is built using [@hey-api/openapi-ts](https://github.com/hey-api/openapi-ts) and provides support for all APIs based on the OpenAPI specification.
-
-English | [简体中文](https://github.com/isaced/appstore-connect-sdk/blob/main/README_zh.md)
 
 ## Kickstart information on the API
 
@@ -21,13 +19,13 @@ The `appstore-connect-sdk` module includes the following features:
 
 ## Examples
 
-- [Deno Example](https://github.com/isaced/appstore-connect-sdk/tree/main/deno_example)
-- [Node Example](https://github.com/isaced/appstore-connect-sdk/tree/main/node_example)
+- [Deno Example](https://github.com/jasperaelvoet/appstore-connect-sdk/tree/main/deno_example)
+- [Node Example](https://github.com/jasperaelvoet/appstore-connect-sdk/tree/main/node_example)
 
 ## Installation
 
 ```bash
-npm install appstore-connect-sdk
+npm install @jasperaelvoet/appstore-connect-sdk
 ```
 
 ## Usage
@@ -35,7 +33,7 @@ npm install appstore-connect-sdk
 #### 1. Import `appstore-connect-sdk`
 
 ```typescript
-import { createClient, appsGetCollection } from "appstore-connect-sdk";
+import { createClient, appsGetCollection } from "@jasperaelvoet/appstore-connect-sdk";
 ```
 
 #### 2. Create a client
@@ -111,7 +109,7 @@ Here's the complete code example:
 **For Team API Keys:**
 
 ```typescript
-import { createClient, appsGetCollection } from "appstore-connect-sdk";
+import { createClient, appsGetCollection } from "@jasperaelvoet/appstore-connect-sdk";
 
 const client = createClient({
   issuerId: "<YOUR ISSUER ID>",
@@ -126,7 +124,7 @@ console.log(res.data);
 **For Individual API Keys:**
 
 ```typescript
-import { createClient, appsGetCollection } from "appstore-connect-sdk";
+import { createClient, appsGetCollection } from "@jasperaelvoet/appstore-connect-sdk";
 
 const client = createClient({
   // No issuerId for Individual API Keys
@@ -149,7 +147,7 @@ import {
   appsGetInstance,
   buildsGetCollection,
   betaTestersGetCollection,
-} from "appstore-connect-sdk";
+} from "@jasperaelvoet/appstore-connect-sdk";
 
 const client = createClient({ /* your config */ });
 
@@ -168,7 +166,7 @@ const builds = await buildsGetCollection({ client, query: { "filter[app]": "app-
 For advanced use cases, you can use the client directly for custom requests:
 
 ```typescript
-import { createClient } from "appstore-connect-sdk";
+import { createClient } from "@jasperaelvoet/appstore-connect-sdk";
 
 const client = createClient({ /* your config */ });
 
@@ -181,7 +179,7 @@ const response = await client.get({ url: "/v1/apps" });
 For integration testing purposes, you can override the base URL of the App Store Connect API by setting the `baseUrl` option. For example, you can use this to point to a local mock server.
 
 ```typescript
-import { createClient } from "appstore-connect-sdk";
+import { createClient } from "@jasperaelvoet/appstore-connect-sdk";
 
 const client = createClient({
   // ...
@@ -201,14 +199,14 @@ This will generate TypeScript code through [@hey-api/openapi-ts](https://github.
 
 ## Deno Compatibility
 
-The `appstore-connect-sdk` module is fully compatible with Deno. An example of using the `appstore-connect-sdk` module in a Deno environment can be found in the [deno_example](https://github.com/isaced/appstore-connect-sdk/tree/main/deno_example).
+The `appstore-connect-sdk` module is fully compatible with Deno. An example of using the `appstore-connect-sdk` module in a Deno environment can be found in the [deno_example](https://github.com/jasperaelvoet/appstore-connect-sdk/tree/main/deno_example).
 
 We are committed to ensuring that the `appstore-connect-sdk` module remains fully compatible with both Node.js and Deno, and we will continue to work on improving its compatibility with Deno as the Deno runtime evolves.
 
 ## License
 
-**appstore-connect-sdk** is available under the MIT license, and uses source code from open source projects. See the [LICENSE](https://github.com/isaced/appstore-connect-sdk/blob/main/LICENSE) file for more information.
+**appstore-connect-sdk** is available under the MIT license, and uses source code from open source projects. See the [LICENSE](https://github.com/jasperaelvoet/appstore-connect-sdk/blob/main/LICENSE) file for more information.
 
 ## Author
 
-This project was originally created by [isaced](https://github.com/isaced) but has had many [great contributors](https://github.com/isaced/appstore-connect-sdk/graphs/contributors). We're open to contributions of any kind to make this project even better.
+This project is maintained by [jasperaelvoet](https://github.com/jasperaelvoet), originally created by [isaced](https://github.com/isaced). We're open to contributions of any kind to make this project even better.
